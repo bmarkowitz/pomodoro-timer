@@ -10,13 +10,15 @@ const model = {
     interval: 0,
     countdown: function() {
 
-        if(view.currentSeconds === 0) {
+        intSeconds = parseInt(view.currentSeconds);
+
+        if(intSeconds === 0) {
             view.currentSeconds = 59;
             view.currentMinutes -= 1;
             view.updateTimerDisplay();
 
         }
-        else if(view.currentSeconds < 10) {
+        else if(view.currentSeconds <= 10) {
             view.currentSeconds -= 1;
             view.currentSeconds = "0" + view.currentSeconds;
             view.updateTimerDisplay();
