@@ -53,8 +53,8 @@ const controller = {
 }
 
 const view = {
-    currentMinutes: parseInt(minutes.textContent),
-    currentSeconds: parseInt(seconds.textContent),
+    currentMinutes: minutes.textContent,
+    currentSeconds: seconds.textContent,
     updateTimerDisplay: function() {
         minutes.textContent = this.currentMinutes;
         seconds.textContent = this.currentSeconds;
