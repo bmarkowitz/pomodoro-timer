@@ -39,6 +39,12 @@ const controller = {
     },
     pauseTimer: function() {
         clearInterval(model.interval);
+    },
+    restartTimer: function() {
+        view.currentMinutes = "25";
+        view.currentSeconds = "00";
+        view.updateTimerDisplay();
+        this.pauseTimer();
     }
 }
 
@@ -52,6 +58,7 @@ const view = {
     setupEventListeners: function() {
         start.addEventListener('click', controller.startTimer);
         pause.addEventListener('click', controller.pauseTimer);
+        restart.addEventListener('click', controller.restartTimer.bind(controller)); //using bind to specifiy desired this value, otherwise this inside restartTimer = the restart button element
     }
 };
 
