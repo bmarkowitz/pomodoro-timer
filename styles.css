@@ -1,8 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+}
+
 .timer {
     display: flex;
     justify-content: center;
-    height: 300px;
     align-items: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
 }
 
 .minutes, .sep, .seconds {
