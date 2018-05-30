@@ -1,0 +1,11 @@
+.timer {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    align-items: center;
+}
+
+.minutes, .sep, .seconds {
+    font-size: 50px;
+    display: inline;
+}
