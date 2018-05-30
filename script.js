@@ -11,8 +11,13 @@ const model = {
     countdown: function() {
 
         intSeconds = parseInt(view.currentSeconds);
+        intMinutes = parseInt(view.currentMinutes);
 
-        if(intSeconds === 0) {
+        if(intMinutes === 0 && intSeconds === 0) {
+            alert('Time is up!');
+            controller.restartTimer();
+        }
+        else if(intSeconds === 0) {
             view.currentSeconds = 59;
             view.currentMinutes -= 1;
             view.updateTimerDisplay();
