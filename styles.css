@@ -1,5 +1,10 @@
 html, body {
     height: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 3px;
 }
 
 .header {
@@ -14,18 +19,14 @@ html, body {
     height: 100%;
 }
 
-.timer {
+.timer, .controls {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
+    margin: 5px;
 }
 
 .minutes, .sep, .seconds {
     font-size: 50px;
     display: inline;
+    margin: 5px 0 5px 0;
 }

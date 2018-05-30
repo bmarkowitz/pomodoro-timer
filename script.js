@@ -6,7 +6,6 @@ const pause = document.querySelector('.pause');
 const restart = document.querySelector('.restart');
 
 const model = {
-    running: false,
     interval: 0,
     countdown: function() {
 
