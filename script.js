@@ -35,6 +35,9 @@ const controller = {
         }
         model.interval = setInterval(model.countdown, 1000);
     },
+    pauseTimer: function() {
+        clearInterval(model.interval);
+    }
 }
 
 const view = {
@@ -46,6 +49,7 @@ const view = {
     },
     setupEventListeners: function() {
         start.addEventListener('click', controller.startTimer);
+        pause.addEventListener('click', controller.pauseTimer);
     }
 };
 
