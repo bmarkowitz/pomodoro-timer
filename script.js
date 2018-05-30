@@ -7,7 +7,7 @@ const restart = document.querySelector('.restart');
 
 const model = {
     running: false,
-    interval: undefined,
+    interval: 0,
     countdown: function() {
 
         if(view.currentSeconds === 0) {
