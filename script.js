@@ -64,7 +64,7 @@ const controller = {
             view.currentMinutes = minutesInput.value;
             view.currentSeconds = secondsInput.value;
         }
-        view.clearSettingsInput();
+        view.updateTimerDisplay();
     }
 }
 
@@ -74,12 +74,6 @@ const view = {
     updateTimerDisplay: function () {
         minutes.textContent = this.currentMinutes;
         seconds.textContent = this.currentSeconds;
-    },
-    clearSettingsInput: function () {
-        console.log(minutesInput.defaultValue);
-        minutesInput.value = minutesInput.defaultValue;
-        secondsInput.value = secondsInput.defaultValue;
-        this.updateTimerDisplay();
     },
     setupEventListeners: function () {
         start.addEventListener('click', controller.startTimer);
