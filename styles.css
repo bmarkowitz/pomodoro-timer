@@ -30,3 +30,9 @@ h1 {
     display: inline;
     margin: 5px 0 5px 0;
 }
+
+.settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
