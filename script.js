@@ -49,13 +49,12 @@ const controller = {
         clearInterval(model.interval);
     },
     restartTimer: function () {
-        view.currentMinutes = "25";
-        view.currentSeconds = "00";
+        this.setTimer();
         view.updateTimerDisplay();
         this.pauseTimer();
     },
     setTimer: function (event) {
-        event.preventDefault();
+        if(event) event.preventDefault();
         if(secondsInput.value < 10) {
             view.currentMinutes = minutesInput.value;
             view.currentSeconds = "0" + secondsInput.value;
