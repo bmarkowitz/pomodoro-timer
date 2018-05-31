@@ -62,7 +62,7 @@ const view = {
     setupEventListeners: function() {
         start.addEventListener('click', controller.startTimer);
         pause.addEventListener('click', controller.pauseTimer);
-        restart.addEventListener('click', controller.restartTimer.bind(controller)); //using bind to specifiy desired this value, otherwise this inside restartTimer = the restart button element
+        restart.addEventListener('click', controller.restartTimer.bind(controller)); //using bind to specify desired this value, otherwise this inside restartTimer = the restart button element
     }
 };
 
